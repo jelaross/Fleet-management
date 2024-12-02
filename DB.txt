@@ -1,0 +1,264 @@
+USE [master]
+GO
+/****** Object:  Database [fleet]    Script Date: 10/21/2024 2:46:55 PM ******/
+CREATE DATABASE [fleet]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'fleet', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\fleet.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'fleet_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\fleet_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+ALTER DATABASE [fleet] SET COMPATIBILITY_LEVEL = 110
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [fleet].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [fleet] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [fleet] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [fleet] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [fleet] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [fleet] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [fleet] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [fleet] SET AUTO_CREATE_STATISTICS ON 
+GO
+ALTER DATABASE [fleet] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [fleet] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [fleet] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [fleet] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [fleet] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [fleet] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [fleet] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [fleet] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [fleet] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [fleet] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [fleet] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [fleet] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [fleet] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [fleet] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [fleet] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [fleet] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [fleet] SET RECOVERY FULL 
+GO
+ALTER DATABASE [fleet] SET  MULTI_USER 
+GO
+ALTER DATABASE [fleet] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [fleet] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [fleet] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [fleet] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'fleet', N'ON'
+GO
+USE [fleet]
+GO
+/****** Object:  Table [dbo].[assignvechicle]    Script Date: 10/21/2024 2:46:55 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[assignvechicle](
+	[did] [int] NULL,
+	[name] [varchar](15) NULL,
+	[vid] [int] NULL,
+	[regno] [varchar](20) NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[driverdetails]    Script Date: 10/21/2024 2:46:56 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[driverdetails](
+	[did] [int] NULL,
+	[name] [varchar](30) NULL,
+	[age] [int] NULL,
+	[mobile] [varchar](11) NULL,
+	[email] [varchar](30) NULL,
+	[gender] [varchar](10) NULL,
+	[image] [varchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[logindetails]    Script Date: 10/21/2024 2:46:56 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[logindetails](
+	[username] [varchar](50) NULL,
+	[password] [varchar](50) NULL,
+	[usertype] [varchar](50) NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tripdetails]    Script Date: 10/21/2024 2:46:56 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tripdetails](
+	[tid] [int] NULL,
+	[vid] [varchar](50) NULL,
+	[did] [varchar](50) NULL,
+	[starting_reading] [varchar](50) NULL,
+	[end_reading] [varchar](50) NULL,
+	[kilometers] [varchar](50) NULL,
+	[destination] [varchar](50) NULL,
+	[startdate] [varchar](50) NULL,
+	[enddate] [varchar](50) NULL,
+	[Toll] [varchar](50) NULL,
+	[Fare] [int] NULL,
+	[status] [varchar](50) NULL,
+	[total] [varchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[vehiclesdetails]    Script Date: 10/21/2024 2:46:56 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[vehiclesdetails](
+	[vid] [int] NULL,
+	[vechicletype] [varchar](50) NULL,
+	[model] [varchar](50) NULL,
+	[regno] [varchar](50) NULL,
+	[image] [varchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+INSERT [dbo].[assignvechicle] ([did], [name], [vid], [regno]) VALUES (10101, N'Harish Nirmal', 30101, N'TN-72-1234')
+GO
+INSERT [dbo].[assignvechicle] ([did], [name], [vid], [regno]) VALUES (10102, N'shijin', 30106, N'TN-27-5557')
+GO
+INSERT [dbo].[assignvechicle] ([did], [name], [vid], [regno]) VALUES (10103, N'ajozin', 30103, N'TN-47-5557')
+GO
+INSERT [dbo].[assignvechicle] ([did], [name], [vid], [regno]) VALUES (10104, N'Rahul ', 30104, N'TN-47-5565')
+GO
+INSERT [dbo].[assignvechicle] ([did], [name], [vid], [regno]) VALUES (10105, N'rohith alex', 30105, N'TN-57-5557')
+GO
+INSERT [dbo].[assignvechicle] ([did], [name], [vid], [regno]) VALUES (10110, N'bency', 30108, N'TN75-1856')
+GO
+INSERT [dbo].[driverdetails] ([did], [name], [age], [mobile], [email], [gender], [image]) VALUES (10101, N'Harish Nirmal', 22, N'9629304103', N'harish@gmail.com', N'Male', N'\driverpics\10101.jpg')
+GO
+INSERT [dbo].[driverdetails] ([did], [name], [age], [mobile], [email], [gender], [image]) VALUES (10102, N'shijin', 22, N'6385642384', N'shijinshijin2002@gmail.com', N'Male', N'\driverpics\10102.jpg')
+GO
+INSERT [dbo].[driverdetails] ([did], [name], [age], [mobile], [email], [gender], [image]) VALUES (10103, N'ajozin', 24, N'5467847885', N'ajozin@gmail.com', N'Male', N'\driverpics\10103.jpg')
+GO
+INSERT [dbo].[driverdetails] ([did], [name], [age], [mobile], [email], [gender], [image]) VALUES (10104, N'Rahul ', 22, N'6267873729', N'rahul@gmail.com', N'Male', N'\driverpics\10104.jfif')
+GO
+INSERT [dbo].[driverdetails] ([did], [name], [age], [mobile], [email], [gender], [image]) VALUES (10105, N'rohith alex', 27, N'465757953', N'rohiyk@gmail.com', N'Male', N'\driverpics\10105.jfif')
+GO
+INSERT [dbo].[driverdetails] ([did], [name], [age], [mobile], [email], [gender], [image]) VALUES (10106, N'aloysius', 26, N'5362373298', N'aloysius@gmail.com', N'Male', N'\driverpics\10106.jpg')
+GO
+INSERT [dbo].[driverdetails] ([did], [name], [age], [mobile], [email], [gender], [image]) VALUES (10107, N'kushpu', 35, N'987654567', N'kush@gmail.com', N'Female', N'\driverpics\10107.jfif')
+GO
+INSERT [dbo].[driverdetails] ([did], [name], [age], [mobile], [email], [gender], [image]) VALUES (10108, N'laya', 28, N'754645674', N'layagmail.com', N'Female', N'\driverpics\10108.jfif')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'valan', N'1234', N'owner')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (NULL, NULL, NULL)
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'Harish Nirmal', N'123', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'shijin', N'123', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'ajozin', N'123', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'Rahul ', N'123', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'rohith alex', N'123', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'aloysius', N'123', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'kushpu', N'123', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'laya', N'123', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'rivin', N'rivin', N'driver')
+GO
+INSERT [dbo].[logindetails] ([username], [password], [usertype]) VALUES (N'bency', N'123', N'driver')
+GO
+INSERT [dbo].[tripdetails] ([tid], [vid], [did], [starting_reading], [end_reading], [kilometers], [destination], [startdate], [enddate], [Toll], [Fare], [status], [total]) VALUES (5001, N'30101', N'10101', N'2000', N'3500', N'1500', N'chennai', N'9/25/2024', N'9/25/2024', N'1000', 15000, N'close', N'22000')
+GO
+INSERT [dbo].[tripdetails] ([tid], [vid], [did], [starting_reading], [end_reading], [kilometers], [destination], [startdate], [enddate], [Toll], [Fare], [status], [total]) VALUES (5002, N'30106', N'10101', N'1000', N'2700', N'1700', N'coiambatore', N'9/25/2024', N'9/27/2024', N'1500', 0, N'close', N'20500')
+GO
+INSERT [dbo].[tripdetails] ([tid], [vid], [did], [starting_reading], [end_reading], [kilometers], [destination], [startdate], [enddate], [Toll], [Fare], [status], [total]) VALUES (5003, N'30103', N'10103', N'3500', N'', N'', N'Madurai', N'9/25/2024', N'', N'', 0, N'active', N'')
+GO
+INSERT [dbo].[tripdetails] ([tid], [vid], [did], [starting_reading], [end_reading], [kilometers], [destination], [startdate], [enddate], [Toll], [Fare], [status], [total]) VALUES (5004, N'30104', N'10104', N'2500', N'', N'', N'Trichy', N'9/25/2024', N'', N'', 0, N'active', N'')
+GO
+INSERT [dbo].[tripdetails] ([tid], [vid], [did], [starting_reading], [end_reading], [kilometers], [destination], [startdate], [enddate], [Toll], [Fare], [status], [total]) VALUES (5005, N'30105', N'10105', N'1000', N'', N'', N'Salem', N'9/25/2024', N'', N'', 0, N'active', N'')
+GO
+INSERT [dbo].[tripdetails] ([tid], [vid], [did], [starting_reading], [end_reading], [kilometers], [destination], [startdate], [enddate], [Toll], [Fare], [status], [total]) VALUES (5006, N'30106', N'10102', N'1000', N'1050', N'50', N'kanyakumar', N'9/27/2024', N'2024-14-27', N'1000', 500, N'close', N'2500')
+GO
+INSERT [dbo].[tripdetails] ([tid], [vid], [did], [starting_reading], [end_reading], [kilometers], [destination], [startdate], [enddate], [Toll], [Fare], [status], [total]) VALUES (5007, N'30108', N'10110', N'10000', N'20000', N'10000', N'delhi', N'10/19/2024', N'2024-39-19', N'3500', 100000, N'close', N'104500')
+GO
+INSERT [dbo].[tripdetails] ([tid], [vid], [did], [starting_reading], [end_reading], [kilometers], [destination], [startdate], [enddate], [Toll], [Fare], [status], [total]) VALUES (5008, N'30106', N'10102', N'20000', N'', N'', N'chennai', N'10/19/2024', N'', N'', 0, N'active', N'')
+GO
+INSERT [dbo].[vehiclesdetails] ([vid], [vechicletype], [model], [regno], [image]) VALUES (30101, N'Light-Duty', N'Ford Transit', N'TN-72-1234', N'\vehiclepicss\30101.jfif')
+GO
+INSERT [dbo].[vehiclesdetails] ([vid], [vechicletype], [model], [regno], [image]) VALUES (30102, N'Medium-Duty', N'Isuzu N-Series', N'TN-74-3214', N'\vehiclepicss\30102.jfif')
+GO
+INSERT [dbo].[vehiclesdetails] ([vid], [vechicletype], [model], [regno], [image]) VALUES (30103, N'Medium-Duty', N'Isuzu N-Series', N'TN-47-5557', N'\vehiclepicss\30103.jpeg')
+GO
+INSERT [dbo].[vehiclesdetails] ([vid], [vechicletype], [model], [regno], [image]) VALUES (30104, N'Heavy-Duty', N'Freightliner Cascadia', N'TN-47-5565', N'\vehiclepicss\30104.jpg')
+GO
+INSERT [dbo].[vehiclesdetails] ([vid], [vechicletype], [model], [regno], [image]) VALUES (30105, N'Service Vehicles', N'Ford F-550', N'TN-57-5557', N'\vehiclepicss\30105.jpg')
+GO
+INSERT [dbo].[vehiclesdetails] ([vid], [vechicletype], [model], [regno], [image]) VALUES (30106, N'Medium-Duty', N'Isuzu N-Series', N'TN-27-5557', N'\vehiclepicss\30106.jfif')
+GO
+INSERT [dbo].[vehiclesdetails] ([vid], [vechicletype], [model], [regno], [image]) VALUES (30107, N'Light-Duty', N'Ford Transit', N'TN-54-9870', N'\vehiclepicss\30107.jpg')
+GO
+INSERT [dbo].[vehiclesdetails] ([vid], [vechicletype], [model], [regno], [image]) VALUES (30108, N'Heavy-Duty', N'Kenworth T680', N'TN75-1856', N'\vehiclepicss\30108.jpeg')
+GO
+USE [master]
+GO
+ALTER DATABASE [fleet] SET  READ_WRITE 
+GO

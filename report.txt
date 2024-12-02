@@ -1,0 +1,3 @@
+"I am doing a software application named fleet Management System using C#.net. Its main purpose is to automate the working of a vechicle management. It has got two users—admin(owner) and driver. admin(owner) can log in to the system, they can add driver details, view it, and edit and delete it. Admin can also view the vechile status,assign vechicle for trip ,assign fare for trip o
+driver  can log in to the system, they can add trip details and view trip details close the trip   dash board for suggestion
+We use SQL Server as the database, and the IDE is Visual Studio 2012."

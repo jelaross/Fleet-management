@@ -1,0 +1,212 @@
+The Fleet Management System is an advanced software application developed using C#.NET, designed to optimize the management of vehicle fleets. This system provides a unified platform to automate and streamline the administrative tasks associated with fleet operations, significantly enhancing overall efficiency.
+The application supports two primary user roles: Admin (Owner) and Driver. The Admin role encompasses comprehensive functionalities including managing driver records, monitoring vehicle statuses, assigning vehicles to specific trips, and setting fare rates. This role ensures efficient oversight and management of fleet resources. Conversely, the Driver role enables users to view and manage trip assignments, update trip details, and close trips once completed. Additionally, drivers have access to a dashboard for receiving updates and suggestions, facilitating better communication and operational management.
+Utilizing SQL Server for data storage and Visual Studio 2012 as the development environment, the system ensures robust data management and a reliable development framework. The Fleet Management System reduces manual errors, optimizes resource utilization, and improves operational productivity. Future enhancements may include real-time GPS tracking and automated reporting to further extend the system’s capabilities and value.
+In essence, the Fleet Management System represents a significant advancement in fleet management technology, offering a streamlined, efficient solution for modern vehicle operations.
+
+INTRODUCTION
+The Fleet Management System is a sophisticated software solution designed to optimize and automate the management of vehicle fleets. Developed using C#.NET, this application offers a centralized platform for efficiently handling various aspects of fleet operations. The primary objective of the system is to enhance operational efficiency and effectiveness by streamlining vehicle management, driver coordination, and trip scheduling.
+The system is structured to support two main user roles: Admin (Owner) and Driver, each with specific functionalities tailored to their responsibilities. For Admins, the system provides a comprehensive set of tools to manage fleet operations. Admins can log in to the system to access and manage driver details. This includes the ability to add new driver records, view existing ones, edit information as needed, and delete records when necessary. The system ensures that driver information is current and accurately reflects the status of each driver.
+In addition to managing driver details, Admins have the capability to monitor the status of each vehicle within the fleet. This includes tracking vehicle availability, scheduling maintenance, and overseeing current assignments. By having real-time visibility into the status of each vehicle, Admins can make informed decisions regarding resource allocation and ensure that the fleet operates smoothly.
+One of the critical features of the system is its ability to facilitate the assignment of vehicles and drivers to specific trips. Admins can assign vehicles to drivers based on availability and requirements, optimizing the use of fleet resources. Additionally, Admins can set and adjust fare rates for trips, taking into account factors such as distance traveled, vehicle type, and demand. This functionality helps in managing the financial aspects of fleet operations and ensures transparency in fare calculations.
+Drivers benefit from a range of features designed to support their day-to-day activities. Upon logging into the system, drivers can view their assigned trips and access detailed information about each trip. They have the ability to add details, such as start and end times, locations, and other relevant information. Drivers can also update the status of their trips, marking them as in progress or completed as appropriate.
+The system includescludes C#.NET for application development, SQL Server for database management, and Visual Studio 2012 as the development environment. C#.NET provides a robust framework for building the application’s core functionality, while SQL Server ensures reliable data storage and management. Visual Studio 2012 offers a stable and comprehensive environment for coding, debugging, and testing the application.
+The development process of the Fleet Management System involves several phases, each crucial to the successful implementation of the project. The initial phase is requirement analysis, during which the needs and objectives of the system are gathered and documented. This phase sets the foundation for the subsequent stages by defining what the system must accomplish.
+Following requirement analysis, the system design phase involves creating the architecture of the application, including the database schema and user interface layouts. This design phase ensures that the system’s structure supports its intended functionality and provides a user-friendly experience.
+The development phase encompasses the actual coding of the application, using C#.NET to implement the features and functionalities defined during the design phase. Concurrently, the SQL Server database is set up to handle data storage and management. This phase also includes integrating various components of the system to ensure they work together seamlessly.
+Testing is a critical phase of the project, 
+SYSTEM ANALYSIS
+System analysis is a critical phase in the development of an information system that involves examining and understanding the current system's functionality and identifying areas for improvement. This process includes gathering detailed requirements from stakeholders, evaluating existing systems and processes, and determining the needs and objectives of the new system. The goal of system analysis is to define the specific functionalities, constraints, and expectations for the proposed system, ensuring it effectively addresses the problems or limitations of the existing system. By analyzing the current setup and envisioning the desired improvements, system analysis lays the foundation for designing and implementing a solution that enhances operational efficiency and meets organizational goals.
+2.1 SYSTEM REQUIREMENTS
+System requirements are a set of specifications that define the necessary hardware, software, and operational capabilities needed for a system to function effectively. These requirements detail the technical and functional aspects of the system, including the hardware configurations (such as processors, memory, and storage), software components (such as operating systems, development tools, and database management systems), and user interfaces required to support the intended operations. They also outline performance criteria, security measures, and integration needs to ensure compatibility with existing systems and meet user needs. By clearly defining these requirements, organizations can ensure that the system is capable of supporting its intended functions, delivering reliable performance, and achieving the desired outcomes.
+2.1.1 HARDWARE REQUIREMENTS
+Hardware requirements define the physical components needed to support the operation of a software system effectively. They include specifications for the central processing unit (CPU), memory (RAM), storage, network connectivity, and peripheral devices, all of which are essential for running the system smoothly and efficiently. These requirements ensure that the hardware can handle the system's processing demands, store necessary data, provide reliable network access, and support user interactions. By establishing clear hardware requirements, organizations can ensure that their infrastructure is capable of supporting the software’s functionality, delivering optimal performance, and meeting the operational needs of the users
+Component	Minimum Requirements	Recommended Requirements
+Processor	Intel Core i3 or equivalent	Intel Core i5 or higher
+RAM	4 GB	8 GB or higher
+Storage	250 GB HDD	500 GB SSD or higher
+Network	Reliable internet connection	High-speed internet connection
+Display	1024 x 768 resolution	1920 x 1080 resolution or higher
+2.1.2 SOFTWARE REQUIREMENTS
+Software requirements specify the essential software components and configurations needed to support the effective operation of an information system. These include the operating system, development tools, database management systems, and any additional software necessary for running and maintaining the system. Software requirements define the specific versions and capabilities of these components to ensure compatibility, performance, and security. They also encompass user interface design requirements, reporting tools, and integration capabilities with other systems. By outlining these requirements, organizations ensure that the software environment is conducive to the successful implementation and functioning of the system, providing the necessary tools and infrastructure to meet user needs and system objectives.
+Component	Details
+Operating System	Windows 7 or later (Windows 10/11 recommended)
+Development Tools	Visual Studio 2012
+Programming Language	C#.NET
+Database Management System	SQL Server 2012 or later
+Database Management Tool	Microsoft SQL Server Management Studio (SSMS)CHAPTER 3
+SYSTEM SPECIFICATION
+3.1 OPERATING SYSTEM
+WINDOWS 10
+Windows 10 is a major release of the Microsoft Windows operating system, unveiled in July 2015. It represents a significant evolution from its predecessor, Windows 8.1, incorporating numerous enhancements and features designed to improve usability, security, and performance. This version of Windows marked a strategic shift for Microsoft, as it sought to unify the user experience across a range of devices, including PCs, tablets, and smartphones, under a single operating system.
+One of the hallmark features of Windows 10 is its return to the traditional desktop interface, which was a response to widespread feedback from users who were dissatisfied with the radical changes introduced in Windows 8. The Start Menu, a familiar element in previous versions, was reintroduced and redesigned to blend the classic list-based format with the live tiles introduced in Windows 8. This hybrid approach allows users to access their most-used apps and programs quickly while benefiting from dynamic, real-time updates from live tiles.
+Windowsigned to support a wide range of hardware and software. It offers backward compatibility with many older applications and devices, ensuring that users can transition smoothly from previous versions of Windows without encountering significant compatibility issues. The operating system also includes built-in tools and features to assist with the upgrade process, making it easier for users to migrate to Windows 10 from older versions.
+Overall, Windows 10 represents a comprehensive and forward-looking operating system that blends familiarity with innovation. It addresses user feedback from previous versions, introduces new features to enhance productivity and security, and embraces the evolving landscape of computing with support for a diverse range of devices and applications. Through continuous updates and a focus on user experience, Windows 10 aims to provide a versatile and reliable platform for both personal and professional use.
+
+3.2 SOFTWARE DESCRIPTION
+VISUAL STUDIO 2012
+Visual Studio 2012, released by Microsoft, is an integrated development environment (IDE) designed to support the development of a wide range of applications across various platforms. As part of the Visual Studio family, it represents a significant evolution from its predecessors, offering a suite of tools and features aimed at enhancing productivity and streamlining the development process. This version is well-suited for developing applications for Windows, web, and mobile environments, and it continues to be used by many developers despite newer versions being available.
+At its core, Visual Studio 2012 is built around the concept of providing a comprehensive development environment where developers can write, test, and debug code all within a single interface. The IDE supports multiple programming languages, including C#, VB.NET, C++, and F#, among others, allowing developers to work on diverse projects without needing to switch between different tools. This multi-language support is complemented by advanced code editing features, such as syntax highlighting, code completion, and refactoring tools, which help streamline the coding process and improve code quality.
+
+One of the notable features introduced in Visual Studio 2012 is the revamped user interface, which includes a more modern and streamlined design compared to earlier versions. The IDE incorporates a new color scheme and layout that aims to enhance usability and reduce visual clutter. The improved interface includes features such as the new Start Page, which provides quick access to recent projects, useful resources, and tutorials. Additionally, the IDE's enhanced navigation and search capabilities make it easier for developers to locate files, classes, methods, and other elements within large codebases.
+Visual Studio 2012 also introduces enhancements to the debugging experience, a critical aspect of software development. The IDE offers advanced debugging tools such as the ability to debug code across multiple processes, attach to remote processes, and inspect real-time values of variables and objects. The "IntelliTrace" feature is particularly noteworthy, as it provides a historical view of code execution, allowing developers to step back through previous states of the application to diagnose issues more effectively. This historical debugging capability can significantly accelerate the process of identifying and fixing bugs.
+The IDE includes comprehensive support for version control systems, including integration with Microsoft Team Foundation Server (TFS) and Git. This integration facilitates collaborative development by allowing developers to manage source code, track changes, and coordinate with team members seamlessly. Visual Studio 2012's built-in tools for version control help streamline the workflow, reduce conflicts, and ensure that changes are properly documented and managed throughout the development cycle.
+For wesents a powerful and versatile development environment that caters to a wide range of development needs. Its modern interface, advanced debugging and testing tools, support for multiple programming languages, and integration with version control systems make it a valuable asset for developers working on various types of applications. Despite the release of newer versions, Visual Studio 2012 remains a relevant and capable IDE for many development projects, providing a robust platform for building high-quality software.
+
+SQL SERVER 2012
+SQL Server 2012, developed by Microsoft, is a powerful relational database management system (RDBMS) that provides robust support for data storage, retrieval, and management. Released as part of the Microsoft SQL Server family, this version offers a range of advanced features and improvements over its predecessors, aimed at enhancing performance, scalability, and security for enterprise applications.
+have also been enhanced in SQL Server 2012. The introduction of the new Data Compression feature helps reduce the storage footprint of databases, improving I/O performance and reducing costs. The SQL Server Management Studio (SSMS) includes improved tools for performance monitoring, such as the new Activity Monitor and Data Collection, which provide valuable insights into database performance and help identify potential issues before they impact operations. These tools assist database administrators in maintaining optimal performance and ensuring efficient use of resources.
+Overall, SQL Server 2012 represents a significant advancement in database management technology, offering a range of features designed to enhance performance, security, and manageability. Its improvements in high availability, disaster recovery, business intelligence, and cloud integration make it a robust and versatile platform for managing complex and large-scale data environments. Whether used for transactional processing, data warehousing, or business intelligence, SQL Server 2012 provides the tools and capabilities needed to support a wide range of data management needs, making it a valuable asset for organizations seeking to leverage their data for strategic advantage.
+
+MICROSOFT WORD
+Microsoft Word is a powerful word processing application developed by Microsoft. It is part of the Microsoft Office suite, which includes other productivity applications such as Excel, PowerPoint, and Outlook. Since its initial release in 1983, Microsoft Word has evolved significantly, becoming a ubiquitous tool for creating, editing, and formatting text documents.
+One of tncludes features designed to make content accessible to individuals with disabilities. The Accessibility Checker tool helps identify and address potential accessibility issues, ensuring that documents are usable by all individuals, including those using screen readers or other assistive technologies.
+Security features in Microsoft Word include password protection and encryption options, which help safeguard sensitive information. Users can restrict access to documents by setting passwords, and sensitive content can be encrypted to prevent unauthorized access. These features are particularly important for handling confidential or proprietary information.
+
+Additionally, Microsoft Word supports a wide range of file formats, making it versatile for sharing documents with users who may not have the latest version of the application. Users can save documents in formats such as PDF, RTF, and HTML, among others, ensuring compatibility with various platforms and devices.
+Overall, Microsoft Word remains one of the most widely used word processing tools due to its comprehensive feature set and ease of use. Its robust formatting, collaboration, and multimedia capabilities make it an essential application for personal, academic, and professional document creation. As technology continues to evolve, Microsoft Word adapts by incorporating new features and improvements, ensuring that it remains a valuable tool for a diverse range of users.
+
+MICROSOFT POWERPOINT
+Microsoft PowerPoint is a widely used presentation software developed by Microsoft, integral to the Microsoft Office suite. Since its initial release in 1987, PowerPoint has become a standard tool for creating dynamic and visually engaging presentations. It enables users to design, organize, and display content in a slide-based format, making it an essential application for various professional, educational, and personal uses.
+PowerPoint’s core functionality revolves around the creation of slidesips, and video files directly into their presentations, creating a rich multimedia experience. The software includes tools for editing and formatting these elements, such as cropping images, adjusting video playback settings, and synchronizing audio with slide transitions. This multimedia capability allows for a more interactive and immersive presentation, catering to various content types and audience preferences.
+For those requiring advanced data visualization, PowerPoint provides tools to insert and customize charts and graphs. Users can create charts based on data from Excel or manually input data into PowerPoint, enabling the presentation of complex information in a clear and understandable format. The application supports various chart types, including bar, line, pie, and scatter plots, and allows for customization to match the presentation’s design and style.
+
+Collaboration and sharing features are integral to PowerPoint’s functionality. Users can collaborate on presentations in real-time through cloud services like OneDrive or SharePoint, allowing multiple people to work on the same file simultaneously. Comments and feedback can be added directly to the slides, facilitating the review and editing process. Additionally, PowerPoint offers options for sharing presentations in various formats, such as PDF or video, and provides tools for creating online presentations or exporting slides as image files.
+PowerPoint insers to safeguard their presentations. Users can set passwords to restrict access to files, control editing permissions, and prevent unauthorized modifications. This level of security is essential for protecting sensitive or proprietary content and ensuring that only authorized individuals can make changes to the presentation.
+P for creating presentations that effectively communicate information and ideas. Its comprehensive design features, multimedia support, collaboration capabilities, and integration with other Microsoft Office applications make it an invaluable resource for a wide range of users, from business professionals and educators to students and individuals creating personal presentations. As technology advances, PowerPoint continues to evolve, incorporating new features and improvements to meet the changing needs of its users.
+
+CHAPTER 4
+SYSTEM DESIGN
+Design is the first step into the development phase for any engineered product or system. Design is a creative process. A good design is the key to effective system. The term “design” is defined as “the process of applying various techniques and principles for the purpose of defining a process or a system in sufficient detail to permit its physical realization”. It may be defined as a process of applying various techniques and principles for the purpose of defining a device, a process or a system in sufficient detail to permit its physical realization. Software design sits at the technical kernel of the software engineering process and is applied regardless of the development paradigm that is used. The system design develops the architectural detail required to build a system or product. As in the case of any systematic approach, this software too has undergone the best possible design phase fine tuning all efficiency, performance and accuracy levels. The design phase is a transition from a user oriented document to a document to the programmers or database personnel. System design goes through two phases of development: Logical and Physical Design.
+LOGICAL DESIGN
+The logical flow of the system and define the boundaries of the system. In the Logical Designing we had done the following activities
+	Reviews the current physical system – its data flows, file content, volumes, frequencies etc.
+	Prepares output specifications – that is, determines the format, content and frequency of reports.
+	Prepares input specifications – format, content and most of the input functions.
+	Prepares edit, security and control specifications.
+	Specifies the implementation plan.
+	Prepares a logical design walk through of the information flow, output, input,   controls and implementation plan.
+	Reviews benefits, costs, target dates and system constraints.
+
+
+PHYSICAL DESIGN
+	Physical system produces the working systems by define the design specifications that tell the programmers exactly what the candidate system must do. In the Physical Designing Phase we had the following activities
+	Desigd a physical design 
+      Walk through.
+	Plan system implementation.
+	Prepare a conversion schedule and target date.
+	Determine training procedures, courses and timetable.
+	Devise a test and implementation plan and specify any new hardware/software.
+	Update benefits , costs , conversion date and system constraints
+4.1 INPUT DESIGN
+	The input design is the link between the information system and the user. It comprises the developing specification and procedures for data preparation and those steps are necessary to put transaction data into a usable form for processing can be achieved by inspecting the computer to read  data from a written or printed document. The design of input focuses on controlling the amount of input required, controlling the errors, avoiding delay, avoiding extra steps and keeping the process simple. The input is designed in such a way so that it provides security and ease of use with retaining the privacy. In the Input designing we had considered the following things
+	What data should be given as input?
+	How the data should be arranged or coded?
+	The dialog to guide the operating personnel in providing input.
+	Methods for preparing input validations and steps to follow when errors occur.
+	It is achieved by creating user friendly screens for the data entry to handle large                 volume of data. 
+	The goal of designing input is to make data entry easier and to be free from errors. The data entry screen is designed in such a way that all the data manipulates can be performed. It also provides record viewing facilities
+	Input design is the process of converting a user oriented description of the input into a computer based system .This design is important to avoid errors  in the data Input process and show the correct direction to the management for getting correct information from the computerized system.
+When the data is entered it will check for its validity. Data can be entered for its Validity. Mostly input data  can be selected from a list of data items  . Appropriate messages are provided as when needed so that the user will not be in maize of instant. Thus the objective of input is to create an input lay out that is easy to follow. For example in user registration form all the fields except some optional fields must be enter, otherwise display appropriate error message.
+4.2 OUTPUT DESIGN
+	A quality output is one, which meets the requirements of the end user and presents the information clearly. In any system results of processing are communicated to the user and to other system through outputs. In output design it is determined how the information is to be displaced for immediate need and also the hard copy output. It is the most important and direct source information to the user. Efficient and intelligent output design improves the systems relationships to help user decision making.
+	Designing computer output should proceed in an organized well thought manner, the right output must be developed while ensuring that each output element is designed so that people will find the system can use easily and effectively. In this phase we had done the followings
+	Identify the specific output that is needed to meet the requirements.
+	Select methods for presenting information.
+	Create document, report or other format that contain information produced by the system.
+
+
+4.3 DATA FLOW DIAGRAM
+A Data Flow Diagrsent the movement of data between processes, data stores, and external entities. These flows are typically labeled to indicate the specific data being transferred, making it easier to trace how information travels through the system. Understanding data flows is vital for identifying how data inputs are transformed into outputs, helping to ensure that all necessary data paths are accounted for.
+Finally, external entities are represented by rectangles and denote outside actors that interact with the system, such as users, other systems, or external organizations. These entities provide input to the system or receive output from it, making them a crucial part of understanding the system’s boundaries and interfaces.
+DFDs can be developed at different levels of detail. The context level (Level 0) DFD offers a broad overview of the entire system, showing it as a single process with its interactions with external entities. This high-level view is useful for understanding the system's overall scope and its external relationships. As the DFD is further decomposed into Level 1 and beyond, more detailed processes and data flows are revealed, providing a deeper understanding of the system's internal workings. This progressive detailing helps in refining the system's design and ensuring that all functional requirements are met.
+In summary, a DFD is an invaluable tool for visualizing and analyzing the flow of data within a system. By breaking down the system into its fundamental components—processes, data stores, data flows, and external entities—a DFD provides a clear and organized representation of how information is handled. This makes it easier for stakeholders to understand the system's functionality, identify potential issues, and design effective solutions that meet the system’s requirements.
+ 
+
+Level 0 (Context Diagram )
+ 
+Level 1 (Owner) 
+ Level 1 (Driver) 
+ 
+Level 2 (Owner manage driver ) 
+
+ 
+Level 2 (Driver manage vehicles) 
+ 
+
+4.4 DATABASE DESIGN
+Database Design is an important activity in design. The efficiency of the system lies in the efficiency of the database. The database design consists of predetermining number of tables that are to be used and fields that are to be used in each table. The efficiency of the system to retrieve the appropriate data depends on how the fields are specified and the coding mostly depends on format of the database.
+Table Design
+           The tables in the system are 
+1)Login Details
+Column Name	Datatype	Constraint
+		
+		
+		
+
+4.5 USE CASE DIAGRAM
+A use case diagram is a type of behavioral diagram in the Unified Modeling Language (UML) that visually represents the interactions between external entities (known as actors) and the system under consideration. It captures the functional requirements of a system by illustrating how different users will interact with it to achieve specific goals. The diagram helps to identify and define the various functions, or "use cases," that the system must perform in response to these interactions.
+
+In a use case diagram, actors represent the different roles played by external entities, which could be human users, external systems, or devices that interact with the system. These actors are depicted as simple stick figures. The diagram also includes use cases, which are depicted as ovals or ellipses within the system boundary, representing the specific actions or services the system performs in response to an actor's interaction. The system boundary, usually represented as a rectangle, delineates the scope of the system, indicating which use cases fall within the system's responsibilities.
+The relationships in a use case diagram show how actors are connected to the use cases they participate in. These relationships can take several forms, such as associations (which connect actors to use cases), inclusions (where one use case always involves another), and extensions (where one use case optionally adds behavior to another). There is also the possibility of generalization, where actors or use cases are shown in a hierarchical relationship, indicating that one is a specialized version of the other.
+Overall, a use case diagram serves as a high-level representation of the system's functional requirements, offering a clear and concise way to understand the interactions between the system and its users or other external entities. This makes it an essential tool in both the design and communication phases of software development.
+
+
+
+
+
+
+
+ 
+Owner Use Case Diagram
+
+ 
+Driver Use Case Diagram
+CHAPTER 5
+SYSTEM TESTING
+System testing is actually a series of different tests whose primary purpose is to fully exercise the computer based system. The common view of testing held by users is that it is performed to prove that there are no errors in the system. All though each test has a different purpose, all work should verify that all system elements have properly integrated and perform allocated functions. System tests are test designed to verify that the finished system meets its requirements. Once the application has undergone system testing, it may be put through actual use within the development organization. The purpose of this is to test the system under realistic condition, but with understanding and forgiving users.
+                           Software testing is a critical element of software quality assurance and represents the ultimate review of specifications, design and coding. Testing includes verification that the entire system works properly. The programmers facilitate testing by coding as clearly as possible. Test case design focuses on a set of techniques for the creation of test cases that meet overall testing objectives.
+
+Testing objectives are:
+•	Testing is a process of executing a program with the intent of finding an error.
+•	A good test case is one that has a high probability of finding an unconsidered error.
+•	A successful test is one that uncovers an undiscovered error.
+Testing demonstrates that software functions appear to be working according to specifications that performs requirements has been met. In addition data collected as testing is conducted provide a good indication of software reliability and some indication of software quality as a while.
+                But, testing cannot show the absence of defects, it can only show that software defects are present. The debugging process is the most unpredictable part of the testing process.
+5.1 TEST PLAN
+	A test plan implies a series of desired course of action to be followed in accomplishing various testing methods. The Test Plan acts as a blue print for the action that is to be followed. The software engineers create a computer program, its documentation and related data structures. The software developers is always responsible for testing the individual units of the programs, ensuring that each performs the function for which it was designed. There is an independent test group (ITG) which is to remove the inherent problems associated with letting the builder to test the thing that has been built. The specific objectives of testing should be stated in measurable terms. So that the mean time to failure, the cost to find and fix the defects, remaining defect density or frequency of occurrence and test work-hours per regression test all should be stated within the test plan. The levels of testing include:
+	  Unit Testing
+	  Integration Testing
+	  System Testing
+	  Output Testing
+5.2 UNIT TESTING
+The unit testing forces verification of errors on the smallest unit of the software design, the module. The unit testing tests the interface, local data, structure, boundary conditions, independent paths, error handling paths. In this testing each module is tested individually. This testing is carried out during the programming stage itself. This is essential for verification of the code produced during the coding phase, and hence the goal is to test the internal logic of the modules. In this website the unit testing carried out by individual web pages. The following test procedures are used. All the links are available for navigation.
+	For login process first inputting invalid username and password and check that showing error messages when submit the form.
+	In registration each fields are check with valid and invalid data.
+	Check the output data that must be produced according to the input data.
+	Check the security of user’s private data.
+
+
+5.3 INTEGRATION TESTING
+Integration testing is a systematic technique for constructing the program   structure while at the same time conducting test to uncover errors associated within the interface. The objective is to take the unit tested modules and then testing them as a whole. The goal here is to see if the modules can be integrated properly, emphasize being on testing interfaces between modules.
+	All the modules are integrated for this testing.
+	Test the system by navigating from all available links to another.
+	All the functionality should maintain at a single run.  
+5.4 SYSTEM TESTING
+	This is the final step in testing.  In this the entire system was tested as a whole with all forms, code, modules and class modules.  This form of testing is popularly known as Black Box testing or System Testing.
+	Black Box testing method focuses on the functional requirements of the software.  That is, Black Box testing enables the software engineer to derive sets of input conditions that will fully exercise all functional requirements for a program.
+	Black Box testing attempts to find errors in the following categories; incorrect or missing functions, interface errors, errors in data structures or external data access, performance errors and initialization errors and termination errors.
+	
+5.5 OUTPUT TESTING
+	User acceptance of a System is a key factor for the Success of a system. The system under consideration is tested for user acceptance by constantly keeping in touch with prospective system users at the time of development and making changes whenever required. This testing is done to find out whether the user gets the real output for the input entered.
+The system considered is tested for user acceptance; here it should satisfy the firm’s need.  The software should keep in touch with perspective system; user at the time of developing and making changes whenever required.  This done with respect to the following points 
+	Input Screen Designs 
+	Output Screen Designs
+	The above testing is done taking various kinds of test data. Preparation of test data plays a vital role in the system testing. After preparing the test data, the system under study is tested using that test data. While testing the system by which test data errors are again uncovered and corrected by using above testing steps and corrections are also noted for future use.
+In my project “Fully Automated Services of Transport Department”  testing was conducted at every step. Initially each module was tested separately to check whether they gave the desired output for the given input. The forms used to enter data by user were validated and appropriate error messages were displayed if incorrect data was entered. Once the data was entered correctly, the processing was done and testing was done to check whether the correct output was obtained. Once the test cases were conducted successfully for each module, the modules were integrated together as a single system. After integration, the test cases were again applied to check whether the entire system as a whole produced the desired output. At times, the test cases failed and the shortcomings were noted down and appropriate corrections were done. Once the integration testing was performed correctly, output testing was done and it did not result in any change or correction in the system. Black box testing and white box testing was also conducted successfully. All the loops, decisions, relations were executed at least once before giving it to the users for testing. In black box testing, it was checked whether the data in the proper format was stored in the database or not. Also, it was checked whether the interfaces were working properly or not. On successful completion of these tests, the system was then given to undergo user acceptance testing where the users entered test data to check whether the correct output was obtained. The users were satisfied with the output and thus the testing phase was completed successfully.
+
+
+ 
+
+
+,
+
